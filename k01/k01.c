@@ -4,7 +4,7 @@
 #include <math.h>
 
 extern double ave_online(double val,double ave)
-extern double var_online()
+extern double var_online(double val,double ave,double square_ave)
 
 int main(void)
 {
@@ -45,3 +45,25 @@ int main(void)
 
 }
 
+int N;
+
+double ave_online(double val,double ave)
+{
+
+    double ave2;
+
+    ave2 = (N-1) * ave / N + val / N;
+
+    return ave2;
+
+}
+
+double var_online(double val,double ave, double square_ave)
+{
+    double var;
+
+    var = ((N-1)*square_ave/N+val*val/N) - ((N-1)*ave/N+val/N)*((N-1)*ave/N+val/N);
+
+    return var;
+
+}
