@@ -32,5 +32,19 @@ bb35319022 小池真白
 
 ## ソースコードの説明
 
+あいうえお
+
+## 入出力結果
+
+```
+input the filename of sample:../sample/heights_male.csv
+the filename of sample: ../sample/heights_male.csv
+sample mean：
+sample variance：
+population mean (estimated)：
+population variance (estimated)：
+```
+
 ## 修正履歴
 
+説明は「かきくけこ」だ！
