@@ -32,5 +32,24 @@ bb35319022 小池真白
 
 ## ソースコードの説明
 
+あいうえお
+
+## 入出力結果
+
+```
+input the filename of sample:../sample/heights_male.csv
+the filename of sample: ../sample/heights_male.csv
+sample mean：
+sample variance：
+population mean (estimated)：
+population variance (estimated)：
+```
+
 ## 修正履歴
 
+[comment #20200430]
+- Readme.mdに，ソースコードの説明と，入出力の例を書いてください．
+- コンパイルするとエラーが出て，実行ファイルが作られないようです．
+  - 6行目と7行目はプロトタイプ宣言なので，文末にセミコロンが必要です．（私のテンプレートについていないのはワザとでした．）
+  - おそらくこのmain関数では，ファイル名を聴くだけで，計算結果について何も出力表示がありません．
+    どこかでave_onlineやvar_onlineを呼び出さないと．そしてprintfで表示させないと．
