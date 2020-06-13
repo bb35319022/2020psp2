@@ -9,7 +9,7 @@ extern double var_online(double val,double ave,double square_ave)
 int main(void)
 {
     double val;
-    char fname[FILENAME_MAX];
+    char fname[heights_male.csv];
     char buf[256];
     FILE* fp;
 
@@ -26,7 +26,8 @@ int main(void)
 
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
-
+        
+        
 
     
 
@@ -39,6 +40,8 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
+    printf("Average: %f\n", ave2);
+    printf("Variance: %f\n", var);
 
     return 0;
 
@@ -49,13 +52,11 @@ int N;
 
 double ave_online(double val,double ave)
 {
-
     double ave2;
 
     ave2 = (N-1) * ave / N + val / N;
 
     return ave2;
-
 }
 
 double var_online(double val,double ave, double square_ave)
@@ -65,5 +66,4 @@ double var_online(double val,double ave, double square_ave)
     var = ((N-1)*square_ave/N+val*val/N) - ((N-1)*ave/N+val/N)*((N-1)*ave/N+val/N);
 
     return var;
-
 }
