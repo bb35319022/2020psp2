@@ -40,8 +40,8 @@ L48:B県の標本の尤度を出力
 ## 入出力結果
 
 ```
-Likelihood for A：
-Likelihood for B：
+Likelihood for A：0.000006
+Likelihood for B：0.000002
 ```
 
 ## 修正履歴

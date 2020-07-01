@@ -43,29 +43,35 @@ bb35319022 小池真白
 
 ## ソースコードの説明
 
-L.11~14:double型でそれぞれの値を定義する。
+L9:intでNを定義
 
-L.34:繰り返す度にNに１を足す。
+L13~16:doubleでval,est_var,est_ave,ave=0,var=0,square_ave=0を定義
 
-L.35:標本分散を求める。
+L33:Nに0を代入
 
-L.36:標本平均を求める。
+L.38:繰り返す度にNに１を足す。
 
-L.37:二乗の平均を求める。
+L.39:標本分散を求める。
 
-L.46:母集団分散を求める。
+L.40:標本平均を求める。
 
-L48~51:求めた値をそれぞれ出力する。
+L.41:二乗の平均を求める。
+
+L45:標本平均と標本分散を出力
+
+L.48:母集団分散を求める。
+
+L57~58:母集団平均と母集団分散をそれぞれ出力する。
 
 ## 入出力結果
 
 ```
 input the filename of sample:../sample/heights_male.csv
 the filename of sample: ../sample/heights_male.csv
-sample mean：
-sample variance：
-population mean (estimated)：
-population variance (estimated)：
+sample mean：173.888750
+sample variance： 25.361711
+population mean (estimated)：173.888750
+population variance (estimated)：28.984813
 ```
 
 ## 修正履歴

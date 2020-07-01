@@ -6,9 +6,11 @@
 extern double ave_online(double val,double ave);
 extern double var_online(double val,double ave,double square_ave);
 
+int N;
+
 int main(void)
 {
-    double val,x;
+    double val,est_var,est_ave;
     double ave=0;
     double var=0;
     double square_ave=0;
@@ -28,41 +30,46 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
+    N=0;
+
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
         
-        N = N+1;
+        N = N + 1;
         var = var_online(val, ave, square_ave);
         ave = ave_online(val, ave);
-        square_ave =ave_online(val*val, square_ave);
+        square_ave = ave_online(val*val, square_ave);
 
     }
+
+    printf("sample mean: %f\n", ave);
+    printf("sample variance: %f\n", var);
+
+     est_var = N * var / (N-1);
+     est_ave = ave;
 
     if(fclose(fp) == EOF){
         fputs("file close error\n",stderr);
         exit(EXIT_FAILURE);
     }
 
-    x = N*var/(N-1);
-
-    printf("Average: %f\n", ave);
-    printf("Variance: %f\n", var);
-    printf("Pop Average: %f\n", ave);
-    printf("Pop Variance: %f\n", x); 
+  
+    printf("population mean (estimated): %f\n", est_ave);
+    printf("population variance (estimated): %f\n", est_var); 
 
     return 0;
 
 }
 
-int N=0;
 
-double ave_online(double val,double ave)
+
+double ave_online(double val, double ave)
 {
-    double ave;
+    double ave2;
 
-    ave = (N-1) * ave / N + val / N;
+    ave2 = (N-1) * ave / N + val / N;
 
-    return ave;
+    return ave2;
 }
 
 double var_online(double val,double ave, double square_ave)
