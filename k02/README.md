@@ -50,3 +50,6 @@ Likelihood for B：0.000002
 `const double ...` にした方が良いです.  
 もしくは  
  `#define mu1 ... ` でも良いです. 
+
+[comment #20200703]
+- OKです. 
