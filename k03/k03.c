@@ -20,10 +20,10 @@ int main(int argc, char* argv[])
     double sigma;
     int i;
     double dummy;
-    if(argc<4){printf("error");}
-  
-    
-
+    if(argc<4){
+        printf("error:too few arguments");
+        return 1;
+        }
     sscanf(argv[1], "%lf", &mu);
     sscanf(argv[2], "%lf", &sigma);
     sscanf(argv[3], "%d", &num_dummy);      
