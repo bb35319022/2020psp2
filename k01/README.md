@@ -43,7 +43,7 @@ bb35319022 小池真白
 
 ## ソースコードの説明
 
-L9:intでNを定義
+L9:intでNを宣言
 
 L13~16:doubleでval,est_var,est_ave,ave=0,var=0,square_ave=0を定義
 
@@ -82,3 +82,7 @@ population variance (estimated)：28.984813
   - 6行目と7行目はプロトタイプ宣言なので，文末にセミコロンが必要です．（私のテンプレートについていないのはワザとでした．）
   - おそらくこのmain関数では，ファイル名を聴くだけで，計算結果について何も出力表示がありません．
     どこかでave_onlineやvar_onlineを呼び出さないと．そしてprintfで表示させないと．
+
+
+[comment #20200702]
+- OKです. 
