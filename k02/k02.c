@@ -11,7 +11,7 @@ int main(void)
 {
     double val;
     double z1, z2;
-    double mu1=170.8, mu2=169.7, sig1=5.43, sig2=5.5;
+    const double mu1=170.8, mu2=169.7, sig1=5.43, sig2=5.5;
     char fname[FILENAME_MAX];
     char buf[256];
     FILE* fp;

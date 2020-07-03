@@ -25,7 +25,7 @@ L4:#define _USE_MATH_DEFINES　でM_PIを定義
 
 L12~13:double型でval,z1,z2を宣言
 
-L14:double型でmu1,mu2,sig1,sig2を宣言し、値を代入
+L14:const double型でmu1,mu2,sig1,sig2を宣言し、値を代入
 
 L34~35:A県、B県の標本それぞれを標準化
 
