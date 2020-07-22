@@ -10,7 +10,7 @@ struct heights_data{
 
 int main(void)
 {
-    struct heights_data data[ID_NUM-1];
+    struct heights_data data[ID_NUM];
     int ID, i=0;
     char fname1[FILENAME_MAX];
     char fname2[FILENAME_MAX];
