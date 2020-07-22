@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define ID_NUM 14
 
 struct heights_data{
     int ID, gender;
@@ -9,7 +10,7 @@ struct heights_data{
 
 int main(void)
 {
-    struct heights_data data[13];
+    struct heights_data data[ID_NUM-1];
     int ID, i=0;
     char fname1[FILENAME_MAX];
     char fname2[FILENAME_MAX];
@@ -66,13 +67,13 @@ int main(void)
 
             }
 
-            else if(i == 13){
+            else if(i == ID_NUM-1){
             printf("No data\n");
 
             return 0;
         }
         
-        i = i++;
+        i++;
 
     }
 }
